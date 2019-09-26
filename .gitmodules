@@ -1,0 +1,9 @@
+[submodule "image_to_map"]
+	path = image_to_map
+	url = https://github.com/FVCD2019/image_to_map.git
+[submodule "cctv_svm"]
+	path = cctv_svm
+	url = https://github.com/FVCD2019/cctv_svm.git
+[submodule "rc_control"]
+	path = rc_control
+	url = https://github.com/FVCD2019/rc_control.git
