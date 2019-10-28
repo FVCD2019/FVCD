@@ -11,7 +11,7 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "image_pub");
   ros::NodeHandle nh;
   image_transport::ImageTransport it(nh);
-  image_transport::Publisher pub = it.advertise("camera/image_raw", 1);
+  image_transport::Publisher pub = it.advertise("/distort_cam0", 1);
   cv::Mat image = cv::imread("/home/ryu/catkin_ws/src/FVCD/image_pub/image/add_AC.jpg", CV_LOAD_IMAGE_COLOR);
   cv::waitKey(30);
   sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image).toImageMsg();
