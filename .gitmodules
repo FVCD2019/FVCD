@@ -7,3 +7,12 @@
 [submodule "rc_control"]
 	path = rc_control
 	url = https://github.com/FVCD2019/rc_control.git
+[submodule "ros_bluetooth"]
+	path = ros_bluetooth
+	url = https://github.com/FVCD2019/ros_bluetooth.git
+[submodule "nav_goal"]
+	path = nav_goal
+	url = https://github.com/FVCD2019/nav_goal.git
+[submodule "fvcd_nav"]
+	path = fvcd_nav
+	url = https://github.com/FVCD2019/fvcd_nav.git

@@ -11,14 +11,16 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "image_pub");
   ros::NodeHandle nh;
   image_transport::ImageTransport it(nh);
-  image_transport::Publisher pub = it.advertise("/distort_cam0", 1);
+  image_transport::Publisher pub0 = it.advertise("/distort_cam0", 1);
+  image_transport::Publisher pub1 = it.advertise("/distort_cam1", 1);
   cv::Mat image = cv::imread("/home/ryu/catkin_ws/src/FVCD/image_pub/image/add_AC.jpg", CV_LOAD_IMAGE_COLOR);
   cv::waitKey(30);
   sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image).toImageMsg();
 
   ros::Rate loop_rate(5);
   while (nh.ok()) {
-    pub.publish(msg);
+    pub0.publish(msg);
+    pub1.publish(msg);
     ros::spinOnce();
     loop_rate.sleep();
   }
